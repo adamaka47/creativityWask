@@ -1,0 +1,58 @@
+.services
+	background-color: #262626
+	color: #a1a1a1
+	padding: 100px 0
+	padding-bottom: 50px
+	&_name
+		font-size: 20px
+		text-transform: uppercase
+		margin-left: 40px
+		letter-spacing: 1px
+	&_descr
+		margin: 0
+	&_header
+		margin-bottom: 20px
+		display: flex
+		align-items: center
+	&_body
+		padding: 25px 35px
+		line-height: 1.6
+		background-color: #343434
+		font-family: $lato
+	&_item
+		margin-bottom: 50px
+		flex-basis: 48%
+		&:hover
+			.services_header img
+				filter: drop-shadow(0 0 10px #fed)
+			.services_name
+				color: #fff
+			.services_body
+				background-color: #3d2329
+				color: #fff
+
+	&_items
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+
+@media (max-width: 960px)
+	.services
+		padding: 80px 0
+		padding-bottom: 30px
+
+@media (max-width: 750px)
+	.services
+		&_item
+			flex-basis: 80%
+		&_items
+			justify-content: center
+
+@media (max-width: 576px)
+	.services
+		padding-top: 60px
+		padding-bottom: 10px
+		&_body
+			padding: 20px
+		&_item
+			flex-basis: 100%

@@ -1,0 +1,103 @@
+.plans
+	padding: 100px 0
+	padding-bottom: 50px
+	position: relative
+	z-index: 5
+	.fiveangles
+		background: url('../img/shape_pink.svg') center no-repeat
+		width: 21px
+		height: 19px
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		top: -9.5px
+		&::before, &::after
+			content: ''
+			display: block
+			height: 1px
+			width: 250px
+			background-color: $pinks
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+		&::before
+			right: 20px
+		&::after
+			left: 20px
+	&_items
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	&_item
+		flex-basis: 23%
+		text-align: center
+		font-family: $lato
+		margin-bottom: 50px
+	&_item.active
+		.plans_price
+			background-color: $pinks
+			color: #fff
+		.plans_list
+			li button
+				background-color: $pinks
+	&_list
+		padding: 0
+		margin: 0
+		list-style-type: none
+		li
+			padding: 15px 25px
+			border: 1px solid #f1f1f1
+			border-top: 1px solid transparent
+			line-height: 1.6
+			text-transform: uppercase
+			button
+				color: #fff
+				background-color: #262626
+				border: none
+				width: 220px
+				padding: 10px 0
+				font-family: 'Raleway'
+				font-size: 18px
+				text-transform: uppercase
+				cursor: pointer
+				letter-spacing: 1px
+	&_name
+		background-color: #262626
+		color: #fff
+		text-transform: uppercase
+		font-size: 20px
+		padding: 15px 0
+		letter-spacing: 1px
+	&_price
+		padding: 20px 0
+		font-weight: 900
+		font-size: 50px
+		margin: 0
+		background-color: #f1f1f1
+		span
+			font-size: 16px
+			font-weight: 300
+			margin-left: 10px
+
+@media (max-width: 1275px)
+	.plans
+		&_items
+			justify-content: center
+		&_item
+			flex-basis: 40%
+			margin: 40px 20px
+
+@media (max-width: 960px)
+	.plans
+		padding: 80px 0
+		padding-bottom: 40px
+
+@media (max-width: 576px)
+	.plans
+		padding-bottom: 10px
+		&_item
+			margin: 0
+			margin-bottom: 50px
+		.fiveangles
+			&::before, &::after
+				width: 100px

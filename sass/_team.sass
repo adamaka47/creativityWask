@@ -1,0 +1,117 @@
+.team
+	padding: 100px 0
+	position: relative
+	z-index: 5	
+	color: #505050
+	.fiveangles
+		background: url('../img/shape_pink.svg') center no-repeat
+		width: 21px
+		height: 19px
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		top: -9.5px
+		&::before, &::after
+			content: ''
+			display: block
+			height: 1px
+			width: 250px
+			background-color: $pinks
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+		&::before
+			right: 20px
+		&::after
+			left: 20px
+	&_items
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	&_item
+		flex-basis: 23%
+		&:hover .team_socials
+			opacity: 1
+		&:hover .team_name
+			color: $pinks
+		&_1
+			.team_photo
+				background: url('../img/mate_2.jpg') center no-repeat
+				background-size: cover
+		&_2
+			.team_photo
+				background: url('../img/mate_3.jpg') center no-repeat
+				background-size: cover
+		&_3
+			.team_photo
+				background: url('../img/mate_4.jpg') center no-repeat
+				background-size: cover
+		&_4
+			.team_photo
+				background: url('../img/mate_2.jpg') center no-repeat
+				background-size: cover
+	&_photo
+		height: 240px
+		background-size: cover
+	&_socials
+		padding: 0
+		margin: 0
+		list-style-type: none
+		background-color: #222
+		height: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		opacity: 0
+		transition: opacity 0.4s
+		li
+			margin-right: 15px
+			&:last-child
+				margin-right: 0
+			a
+				position: relative
+				display: block
+				color: $pinks
+				font-size: 20px
+				transition: color 0.4s
+				&:hover
+					color: #af8
+				i
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+	&_info
+		border: 1px solid #ddd
+		border-top: 1px solid transparent
+		padding: 30px 0
+		text-align: center
+	&_name
+		font-size: 20px
+		text-transform: uppercase
+		transition: color 0.4s
+		margin-bottom: 20px
+	&_job
+		font-family: $lato
+		font-weight: 900
+		letter-spacing: 0.4px
+
+@media (max-width: 960px)
+	.team
+		padding: 80px 0
+		padding-bottom: 40px
+		.fiveangles
+			&::before, &::after
+				width: 100px
+		&_item
+			flex-basis: 48%
+			margin-bottom: 40px
+
+@media (max-width: 576px)
+	.team
+		padding: 60px 0
+		padding-bottom: 20px
+		&_items
+			justify-content: center
+		&_item
+			flex-basis: 80%

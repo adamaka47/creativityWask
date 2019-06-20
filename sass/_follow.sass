@@ -1,0 +1,65 @@
+.follow
+	padding: 100px 0
+	padding-bottom: 90px
+	background: url('../img/follow_bg.jpg') center no-repeat
+	background-size: cover
+	position: relative
+	z-index: 2
+	color: #fff
+	&::after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		background-color: rgba(#000, 0.9)
+		z-index: -1
+	&_items
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+
+	&_item
+		margin-right: 50px
+		text-align: center
+		&:hover
+			.follow_img
+				color: #fff
+		&:last-child
+			margin-right: 0
+	&_img
+		display: inline-block
+		color: $pinks
+		position: relative
+		font-size: 24px
+		color: $pinks
+		i
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+	&_num
+		margin-top: 40px
+		font-family: $lato
+		font-weight: 900
+		font-size: 20px
+
+@media (max-width: 960px)
+	.follow
+		padding: 80px 0
+		.block_title
+			margin-bottom: 40px
+
+@media (max-width: 576px)
+	.follow
+		padding-top: 60px
+		padding-bottom: 20px
+		&_item
+			margin: 0
+			flex-basis: 50%
+			margin-bottom: 40px
+		&_items
+			justify-content: space-between
+		&_num
+			margin-top: 20px

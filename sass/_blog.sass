@@ -1,0 +1,139 @@
+.blog
+	position: relative
+	z-index: 5	
+	padding: 100px 0
+	color: #505050
+	.fiveangles
+		background: url('../img/shape_pink.svg') center no-repeat
+		width: 21px
+		height: 19px
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		top: -9.5px
+		&::before, &::after
+			content: ''
+			display: block
+			height: 1px
+			width: 250px
+			background-color: $pinks
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+		&::before
+			right: 20px
+		&::after
+			left: 20px
+	&_items.hiddens
+		display: none
+	&_item
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		margin-bottom: 50px
+		&_1
+			.blog_img
+				background: #56ca7f url('../img/blog_1.png') left bottom no-repeat
+				background-size: cover
+				margin-right: 30px
+		&_2
+			.blog_img
+				background: #24b0c9 url('../img/blog_2.png') left bottom no-repeat
+				background-size: cover
+				margin-right: 30px
+	&_img
+		flex-basis: 35%
+		background: #262626
+		width: 100%
+	&_about
+		flex-basis: 50%
+	&_name
+		font-size: 20px
+		letter-spacing: 0.4px
+		font-weight: 900
+		margin-bottom: 20px
+	&_arrow
+		color: #505050
+		display: block
+		width: 40px
+		height: 40px
+		background-color: #f1f1f1
+		color: #a4a4a4
+		display: flex
+		justify-content: center
+		align-items: center
+		font-size: 24px
+		text-decoration: none
+		border-radius: 50%
+		margin: auto
+		&:hover
+			background-color: #262626
+			color: $pinks
+	&_button
+		width: 140px
+		text-align: center
+		padding: 15px 0
+		border: none
+		background-color: #262626
+		color: #fff
+		font-weight: 900
+		text-transform: uppercase
+		font-size: 16px
+		cursor: pointer
+		&:hover
+			background-color: $pinks
+	&_info
+		font-family: $lato
+		line-height: 1.4
+		margin: 0
+		margin-top: 20px
+		margin-bottom: 35px
+	&_mini
+		display: flex
+		align-items: center
+		&_item
+			display: flex
+			align-items: center
+			margin-right: 25px
+			font-family: $lato
+			&:last-child
+				margin-right: 0
+			img
+				margin-right: 8px
+
+@media (max-width: 960px)
+	.blog
+		padding: 80px 0
+		&_about
+			flex-basis: 35%
+		&_img
+			flex-basis: 40%
+
+@media (max-width: 750px)
+	.blog
+		&_about
+			flex-basis: 80%
+		&_img
+			height: 360px
+			flex-basis: 80%
+			margin-bottom: 40px
+		&_item
+			&_1
+				.blog_img
+					margin-right: 0
+			&_2
+				.blog_img
+					margin-right: 0
+
+@media (max-width: 576px)
+	.blog
+		padding: 60px 0
+		.fiveangles
+			&::before, &::after
+				width: 100px
+		&_img
+			flex-basis: 100%
+			background-size: cover
+			background-position: center !important
+		&_about
+			flex-basis: 100%
